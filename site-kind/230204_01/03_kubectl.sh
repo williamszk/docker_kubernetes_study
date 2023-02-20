@@ -1,6 +1,6 @@
 
-
 minikube status
+minikube start 
 
 kubectl version
 
@@ -68,8 +68,22 @@ echo $user_host2
 
 # how to send a local file to a remote machine?
 scp -i $path_pem 230204_01/nginx-config-deployment.yaml ${user_host2}:/home/ubuntu
+scp -i $path_pem 230204_01/nginx-config-service.yaml ${user_host2}:/home/ubuntu
 
 # apply config yaml file
 kubectl apply -f nginx-config-deployment.yaml
+kubectl apply -f nginx-config-service.yaml
 
+kubectl get service
+kubectl get pod
 
+kubectl describe service nginx-service
+
+kubectl get pod -o wide
+
+# Check status
+kubectl get deployment nginx-deployment -o yaml
+
+# how to remove configurations from k8s?
+kubectl delete -f nginx-config-deployment.yaml
+kubectl delete -f nginx-config-service.yaml
