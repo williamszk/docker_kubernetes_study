@@ -1,3 +1,8 @@
+# permission error with docker
+# dial unix /var/run/docker.sock: connect: permission denied
+sudo apt-get install acl
+sudo setfacl --modify user:$USER:rw /var/run/docker.sock
+docker ps -a
 
 minikube status
 minikube start 

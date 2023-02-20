@@ -9,6 +9,11 @@ aws configure
 # an example command
 aws iam list-users
 
+
+# ------------------------------------------------------------------------------------------------------------------------------------------------
+aws ec2 describe-images
+aws describe-images 'ami-06878d265978313ca'
+
 # ------------------------------------------------------------------------------------------------------------------------------------------------
 # Create a new EC2 instance with name 'deleteme-test'
 # Obs: Before running this command make sure that you are in us-east-1
@@ -16,8 +21,7 @@ aws iam list-users
 aws ec2 run-instances \
     --tag-specifications \
         'ResourceType=instance,Tags=[{Key=Name,Value=deleteme-test}]' \
-    # --block-device-mappings \
-    #     '{"DeviceName":"xvdh","Ebs":{"VolumeSize":15}}' \
+    --block-device-mappings file://mapping.json \
     --image-id 'ami-06878d265978313ca' \
     --instance-type t2.medium \
     --count 1 \
@@ -39,7 +43,7 @@ aws ec2 describe-instances --filters "Name=tag:Name,Values=deleteme-test"
 # Delete all created instances that are Running that are called 'deleteme-test'
 running_instance_id=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=deleteme-test" | \
     python3 $PWD/aws_cli_filters.py running_instance_id)
-aws ec2 terminate-instances --instance-ids ${running_instance_id}
+aws ec2 terminate-instances --instance-ids $running_instance_id
 # ------------------------------------------------------------------------------------------------------------------------------------------------
 # How to get the name of the host machine?
 path_pem="william-keypair.pem"

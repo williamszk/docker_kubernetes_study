@@ -14,8 +14,8 @@ def base_get_instance_id(state:str="running"):
     for r in reservations:
         instances = r["Instances"]
         instance = instances[0]
-        state = instance["State"]["Name"]
-        if state == state:
+        current_state = instance["State"]["Name"]
+        if current_state == state:
             instance_id = instance["InstanceId"]
             print(instance_id)
 
