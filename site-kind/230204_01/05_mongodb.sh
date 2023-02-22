@@ -21,13 +21,20 @@ echo $user_host2
 # how to send a local file to a remote machine?
 scp -i $path_pem 230204_01/mongodb-deployment.yaml ${user_host2}:/home/ubuntu
 scp -i $path_pem 230204_01/mongodb-secret.yaml ${user_host2}:/home/ubuntu
+
+scp -i $path_pem 230204_01/mongo-configmap.yaml ${user_host2}:/home/ubuntu
+scp -i $path_pem 230204_01/mongo-express-config.yaml ${user_host2}:/home/ubuntu
 # ----------------------------------------------------------------------------
 
 kubectl apply -f mongodb-secret.yaml
 kubectl apply -f mongodb-deployment.yaml
+kubectl apply -f mongo-configmap.yaml
+kubectl apply -f mongo-express-config.yaml
 
 kubectl delete -f mongodb-deployment.yaml
 kubectl delete -f mongodb-secret.yaml
+kubectl delete -f mongo-configmap.yaml
+kubectl delete -f mongo-express-config.yaml
 
 kubectl get deployment
 kubectl get secret
