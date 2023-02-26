@@ -1,3 +1,7 @@
+In this directory I used many sources to study Kubernetes
+
+Some of them are below
+
 
 # Kind tutorial
 
