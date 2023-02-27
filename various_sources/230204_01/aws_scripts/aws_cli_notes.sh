@@ -9,6 +9,11 @@ aws configure
 # an example command
 aws iam list-users
 
+
+# ------------------------------------------------------------------------------------------------------------------------------------------------
+aws ec2 describe-images
+aws describe-images 'ami-06878d265978313ca'
+
 # ------------------------------------------------------------------------------------------------------------------------------------------------
 # Create a new EC2 instance with name 'deleteme-test'
 # Obs: Before running this command make sure that you are in us-east-1
@@ -16,6 +21,7 @@ aws iam list-users
 aws ec2 run-instances \
     --tag-specifications \
         'ResourceType=instance,Tags=[{Key=Name,Value=deleteme-test}]' \
+    --block-device-mappings file://mapping.json \
     --image-id 'ami-06878d265978313ca' \
     --instance-type t2.medium \
     --count 1 \
@@ -54,7 +60,7 @@ echo $user_host2
 # How to ssh into the EC2 instance?
 # (optional) Maybe you'll need to change the permissions of william-keypair.pem
 # chmod 400 william-keypair.pem
-path_pem="william-keypair.pem"
+path_pem="../../william-keypair.pem"
 ssh -i $path_pem $user_host2
 
 # ------------------------------------------------------------------------------------------------------------------------------------------------
