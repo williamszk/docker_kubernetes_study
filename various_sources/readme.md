@@ -17,8 +17,7 @@ https://www.youtube.com/watch?v=kTp5xUtcalw&ab_channel=freeCodeCamp.org
 
 https://learning.edx.org/course/course-v1:LinuxFoundationX+LFS158x+1T2022/home
 
-https://learning.edx.org/course/course-v1:LinuxFoundationX+LFS158x+1T2022/block-v1:LinuxFoundationX+LFS158x+1T2022+type@sequential+block@815c1eb1ffb24a7b80bbf9df6d6a3267/block-v1:LinuxFoundationX+LFS158x+1T2022+type@vertical+block@1ce21cfc3f87461cbcd6127e9decfbcd
-
+https://learning.edx.org/course/course-v1:LinuxFoundationX+LFS158x+1T2022/block-v1:LinuxFoundationX+LFS158x+1T2022+type@sequential+block@c77b0dbe0dfe4196be4c88c2c3e43699/block-v1:LinuxFoundationX+LFS158x+1T2022+type@vertical+block@5a838f0bcd124053a813732b7dd4bba2
 
 # Youtube TechWorld with Nana
 https://www.youtube.com/watch?v=X48VuDVv0do&ab_channel=TechWorldwithNana
