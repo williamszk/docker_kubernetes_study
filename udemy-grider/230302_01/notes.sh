@@ -25,7 +25,11 @@ docker start test-container
 docker run redis
 
 # ----------------------------------------------------------------
+# With "docker compose" always run the commands inside the directory
+# where the docker-compose.yaml is present.
 cd visits
-docker-compose up --build
-docker-compose down
-docker-compose start
+docker compose up -d --build
+docker compose down
+docker compose start
+
+docker compose ps 
