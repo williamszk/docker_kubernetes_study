@@ -18,6 +18,6 @@ then
     user_host2="${user_host//[$'\t\r\n']}"
     echo $user_host2
 
-    path_pem="../../william-keypair.pem"
+    path_pem="./william-keypair.pem"
     ssh -i $path_pem $user_host2
 fi

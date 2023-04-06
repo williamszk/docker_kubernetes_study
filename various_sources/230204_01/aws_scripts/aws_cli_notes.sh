@@ -60,7 +60,7 @@ echo $user_host2
 # How to ssh into the EC2 instance?
 # (optional) Maybe you'll need to change the permissions of william-keypair.pem
 # chmod 400 william-keypair.pem
-path_pem="../../william-keypair.pem"
+path_pem="../william-keypair.pem"
 ssh -i $path_pem $user_host2
 
 # ------------------------------------------------------------------------------------------------------------------------------------------------

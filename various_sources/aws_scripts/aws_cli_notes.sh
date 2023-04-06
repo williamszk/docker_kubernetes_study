@@ -48,13 +48,18 @@ aws ec2 terminate-instances --instance-ids $running_instance_id
 # How to get the name of the host machine?
 # I'm having a problem with this formating below because it is inserting a space
 # https://stackoverflow.com/a/13662036/15875971
-path_pem="../../william-keypair.pem"
+path_pem="william-keypair.pem"
 public_dns=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=deleteme-test" | \
     python3 $PWD/aws_cli_filters.py public_dns)
 user="ubuntu"
 user_host="${user}@${public_dns}"
 user_host2="${user_host//[$'\t\r\n']}"
 echo $user_host2
+
+
+# ------------------------------------------------------------------------------------------------------------------------------------------------
+# copy local file to remote machine
+scp -i "../aws_scripts/william-keypair.pem" fluentd-agent.yaml $user_host2:/home/ubuntu/
 
 # ------------------------------------------------------------------------------------------------------------------------------------------------
 # How to ssh into the EC2 instance?

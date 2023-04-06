@@ -1,5 +1,25 @@
 minikube profile list
 
+
+minikube status
+# minikube
+# type: Control Plane
+# host: Stopped
+# kubelet: Stopped
+# apiserver: Stopped
+# kubeconfig: Stopped
+
+# minikube-m02
+# type: Worker
+# host: Stopped
+# kubelet: Stopped
+
+# minikube-m03
+# type: Worker
+# host: Stopped
+# kubelet: Stopped
+
+
 # minikube start -n 3
 minikube start
 

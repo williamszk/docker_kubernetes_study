@@ -19,6 +19,9 @@ https://learning.edx.org/course/course-v1:LinuxFoundationX+LFS158x+1T2022/home
 
 https://learning.edx.org/course/course-v1:LinuxFoundationX+LFS158x+1T2022/block-v1:LinuxFoundationX+LFS158x+1T2022+type@sequential+block@c77b0dbe0dfe4196be4c88c2c3e43699/block-v1:LinuxFoundationX+LFS158x+1T2022+type@vertical+block@5a838f0bcd124053a813732b7dd4bba2
 
+https://learning.edx.org/course/course-v1:LinuxFoundationX+LFS158x+1T2022/block-v1:LinuxFoundationX+LFS158x+1T2022+type@sequential+block@c77b0dbe0dfe4196be4c88c2c3e43699/block-v1:LinuxFoundationX+LFS158x+1T2022+type@vertical+block@87965f625479450ca72d079ea72bd467
+
+
 # Youtube TechWorld with Nana
 https://www.youtube.com/watch?v=X48VuDVv0do&ab_channel=TechWorldwithNana
 https://youtu.be/X48VuDVv0do?t=2693
