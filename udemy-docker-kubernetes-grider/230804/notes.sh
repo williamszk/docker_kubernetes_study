@@ -19,5 +19,17 @@ cd server
 touch package.json
 touch keys.js
 
+# to run the main node server 
+cd server
+node index.js
+cd -
 
 
+# react app 
+cd complex
+npx create-react-app client
+cd client
+
+cd complex/client 
+npm install
+npm run start
